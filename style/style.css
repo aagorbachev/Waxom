@@ -175,6 +175,10 @@ p {
     border-radius: 3px;
 }
 
+.slider-button:hover {
+    cursor: pointer;
+}
+
 .btn-text {
     padding: 15px 25px 12px;
     color: #ffffff;
@@ -447,6 +451,8 @@ p {
 .projects-card {
     margin-right: 30px;
     margin-bottom: 30px;
+    position: relative;
+    z-index: 0;
 }
 
 .projects-card:nth-of-type(3n) {
@@ -478,16 +484,56 @@ p {
     line-height: 20px;
 }
 
-.description-dark {
+.onhover-button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+
+.btn-link {
+    top: 105px;
+    left: 144px;
+}
+
+.btn-loupe {
+    top: 105px;
+    right: 146px;
+}
+
+.projects-card:hover .projects_card-description {
     background-color: #362f2d;
 }
 
-.description-dark .projects_card-title {
+.projects-card:hover .projects_card-title {
     color: #ffffff;
 }
 
-.description-dark .projects_card-source {
+.projects-card:hover .projects_card-source {
     color: #c7b299;
+}
+
+.projects-card:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 237px;
+    background: transparent;
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7));
+    z-index: 1;
+}
+
+.projects-card:hover .onhover-button {
+    display: inline;
+    cursor: pointer;
+}
+
+.projects-card:hover .onhover-button:hover .onhover-btn-path {
+    fill: #c7b299;
 }
 
 .projects-button {
@@ -516,5 +562,4 @@ p {
 }
 
 /* ToDo: 
-- Секция Projects: блоки фильтров - это кнопки (button). Блоки с изображениями - figure.
-- Наложить темный фон на 2-й элемент figure
+- Добавить эффект при наведении (смена цвета) на кнопку поиска и корзины в header'е
