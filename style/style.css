@@ -1,8 +1,19 @@
+/* * {
+    margin-block-start: 0;
+    scroll-margin-block-end: 0;
+} */
+
 html {
     font-family: Montserrat, sans-serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 28px;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 .flex-row {
@@ -36,7 +47,7 @@ html {
 .logo {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     flex-grow: 1;
 }
 
@@ -57,6 +68,7 @@ html {
 }
 
 .menu-item {
+    list-style: none;
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 300;
@@ -72,6 +84,10 @@ html {
     color: #ffffff;
 }
 
+.menu-link:hover {
+    color: #c7b299;
+}
+
 .cart {
     margin-right: 30px;
 }
@@ -84,11 +100,38 @@ html {
 .slider {
     align-self: center;
     width: 590px;
+    position: relative;
 }
 
-.slider::before {
-    content: "";
-    background-image: url(../images/top/left-control.svg);
+.slider_left-control {
+    position: absolute;
+    left: -490px;
+    top: 95px;
+}
+
+.slider_left-control:hover {
+    cursor: pointer;
+}
+
+.slider_left-control:hover .left-arrow-path {
+    fill: #d3c1ad;
+    opacity: 1;
+}
+
+.slider_right-control {
+    position: absolute;
+    right: -490px;
+    top: 95px;
+}
+
+.slider_right-control:hover {
+    cursor: pointer;
+}
+
+.slider_right-control:hover .right-arrow-path {
+    cursor: pointer;
+    fill: #d3c1ad;
+    opacity: 1;
 }
 
 .slider-title {
@@ -97,6 +140,7 @@ html {
     font-size: 36px;
     font-weight: 500;
     text-align: center;
+    margin-bottom: 14px;
 }
 
 .main-title {
@@ -105,6 +149,8 @@ html {
     font-size: 52px;
     font-weight: 800;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 19px;
 }
 
 .slider-text {
@@ -115,25 +161,26 @@ html {
     line-height: 24px;
     text-align: center;
     margin-bottom: 52px;
+    word-wrap: break-word;
 }
 
 .slider-button {
     width: 170px;
     align-self: center;
+    border: none;
     background-color: #998675;
     -webkit-box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
     -moz-box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
     box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
-    border: 3px solid #998675;
     border-radius: 3px;
 }
 
 .btn-text {
-    padding: 11px 25px 8px;
+    padding: 15px 25px 12px;
     color: #ffffff;
     font-family: "Raleway";
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 23px;
     text-transform: uppercase;
 }
@@ -155,3 +202,319 @@ html {
 .pagination-link:hover {
     background-image: url(../images/top/pagination/active-page.svg);
 }
+
+.services {
+    padding: 80px 0;
+}
+
+.services-cardbox {
+    justify-content: space-evenly;
+}
+
+.services-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-card::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #f1eee9;
+}
+
+.services-card:hover {
+    cursor: pointer;
+}
+
+.services-card:hover .card-icon_path {
+    fill: #c7b299;
+}
+
+.services-card:hover .card-title {
+    color: #c7b299;
+}
+
+.services-card:hover::after {
+    background-color: #c7b299;
+}
+
+.icon-box {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.card-title {
+    text-align: center;
+    font-family: "Raleway";
+    font-size: 22px;
+    font-weight: 600;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #8c8c8c;
+    margin-bottom: 30px;
+}
+
+.realization {
+    padding-top: 80px;
+    background-color: #fbfaf8;
+}
+
+.realization-container {
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+.title {
+    color: #555555;
+    font-family: "Raleway";
+    font-size: 30px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.realization-title {
+    text-align: center;
+    align-self: center;
+    margin-bottom: 24px;
+}
+
+.text {
+    color: #8c8c8c;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.realization-text {
+    text-align: center;
+    width: 770px;
+    align-self: center;
+    margin-bottom: 40px;
+}
+
+.realization-templates {
+    position: relative;
+}
+
+.template-left {
+    display: block;
+    position: absolute;
+    top: 82px;
+    z-index: 997;
+}
+
+.template-right {
+    display: block;
+    position: absolute;
+    left: 460px;
+    top: 82px;
+    z-index: 998;
+}
+
+.template-center {
+    display: block;
+    position: relative;
+    left: 230px;
+    z-index: 999;
+}
+
+.purchase {
+    padding: 50px 0;
+    background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+}
+
+.purchase-title {
+    color: #ffffff;
+    font-family: "Raleway";
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.brand-style {
+    color: #c7b299;
+}
+
+.purchase-text {
+    color: #615855;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.purchase-container {
+    justify-content: space-between;
+}
+
+.purchase-button {
+    width: 170px;
+    border: none;
+    background-color: #998675;
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
+    -moz-box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
+    box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
+    border-radius: 3px;
+}
+
+.purchase-button:hover, .purchase-button:active {
+    cursor: pointer;
+}
+
+.purchase_btn-text {
+    padding: 15px 25px 12px;
+    color: #ffffff;
+    font-family: "Raleway";
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 23px;
+    text-transform: uppercase;
+}
+
+.projects {
+    padding: 80px 0;
+}
+
+.projects-description {
+    align-self: center;
+}
+
+.projects-title {
+    text-align: center;
+    align-self: center;
+    margin-bottom: 24px;
+}
+
+.projects-text {
+    text-align: center;
+    width: 770px;
+    align-self: center;
+    margin-bottom: 40px;
+}
+
+.filter-box {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.filter {
+    border-radius: 3px;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    margin-right: 10px;
+    color: #8c8c8c;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    padding: 10px 24px 8px;
+}
+
+.filter:last-of-type {
+    margin-right: 0;
+}
+
+.filter:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #998675;
+}
+
+.projects-cardbox {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.projects-card {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.projects-card:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+.projects_card-image {
+    display: block;
+}
+
+.projects_card-description {
+    padding: 30px 28px;
+    background-color: #fbfaf8;
+}
+
+.projects_card-title {
+    color: #c7b299;
+    font-family: "Raleway";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.projects_card-source {
+    color: #d1d1d1;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.description-dark {
+    background-color: #362f2d;
+}
+
+.description-dark .projects_card-title {
+    color: #ffffff;
+}
+
+.description-dark .projects_card-source {
+    color: #c7b299;
+}
+
+.projects-button {
+    width: 170px;
+    border: none;
+    background-color: #998675;
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
+    -moz-box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
+    box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
+    border-radius: 3px;
+    align-self: center;
+}
+
+.projects-button:hover {
+    cursor: pointer;
+}
+
+.projects_btn-text {
+    padding: 15px 25px 12px;
+    color: #ffffff;
+    font-family: "Raleway";
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 23px;
+    text-transform: uppercase;
+}
+
+/* ToDo: 
+- Секция Projects: блоки фильтров - это кнопки (button). Блоки с изображениями - figure.
+- Наложить темный фон на 2-й элемент figure
