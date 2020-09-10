@@ -9,11 +9,8 @@ html {
     font-weight: 300;
 }
 
-p {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
+img {
+    max-width: 100%;
 }
 
 .flex-row {
@@ -99,14 +96,14 @@ p {
 
 .slider {
     align-self: center;
-    width: 590px;
+    max-width: 590px;
     position: relative;
 }
 
 .slider_left-control {
     position: absolute;
-    left: -490px;
-    top: 95px;
+    left: -25vw;
+    top: 35%;
 }
 
 .slider_left-control:hover {
@@ -120,8 +117,8 @@ p {
 
 .slider_right-control {
     position: absolute;
-    right: -490px;
-    top: 95px;
+    right: -25vw;
+    top: 35%;
 }
 
 .slider_right-control:hover {
@@ -173,9 +170,6 @@ p {
     -moz-box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
     box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
     border-radius: 3px;
-}
-
-.btn-text {
     padding: 15px 25px 12px;
     color: #ffffff;
     font-family: "Raleway";
@@ -183,6 +177,10 @@ p {
     font-weight: 800;
     line-height: 23px;
     text-transform: uppercase;
+}
+
+.slider-button:hover {
+    cursor: pointer;
 }
 
 .front-pagination {
@@ -370,13 +368,6 @@ p {
     -moz-box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
     box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
     border-radius: 3px;
-}
-
-.purchase-button:hover, .purchase-button:active {
-    cursor: pointer;
-}
-
-.purchase_btn-text {
     padding: 15px 25px 12px;
     color: #ffffff;
     font-family: "Raleway";
@@ -384,6 +375,10 @@ p {
     font-weight: 800;
     line-height: 23px;
     text-transform: uppercase;
+}
+
+.purchase-button:hover, .purchase-button:active {
+    cursor: pointer;
 }
 
 .projects {
@@ -447,6 +442,8 @@ p {
 .projects-card {
     margin-right: 30px;
     margin-bottom: 30px;
+    position: relative;
+    z-index: 0;
 }
 
 .projects-card:nth-of-type(3n) {
@@ -460,6 +457,17 @@ p {
 .projects_card-description {
     padding: 30px 28px;
     background-color: #fbfaf8;
+    position: relative;
+}
+
+.projects_card-description::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: -25px;
+    border: 15px solid transparent;
+    border-bottom: 10px solid #fbfaf8;
+    z-index: 3;
 }
 
 .projects_card-title {
@@ -478,16 +486,60 @@ p {
     line-height: 20px;
 }
 
-.description-dark {
+.onhover-button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+
+.btn-link {
+    top: 105px;
+    left: 144px;
+}
+
+.btn-loupe {
+    top: 105px;
+    right: 146px;
+}
+
+.projects-card:hover .projects_card-description {
     background-color: #362f2d;
 }
 
-.description-dark .projects_card-title {
+.projects-card:hover .projects_card-title {
     color: #ffffff;
 }
 
-.description-dark .projects_card-source {
+.projects-card:hover .projects_card-source {
     color: #c7b299;
+}
+
+.projects-card:hover .projects_card-description::before {
+    border-bottom: 10px solid #362f2d;
+}
+
+.projects-card:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 237px;
+    background: transparent;
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7));
+    z-index: 1;
+}
+
+.projects-card:hover .onhover-button {
+    display: inline;
+    cursor: pointer;
+}
+
+.projects-card:hover .onhover-button:hover .onhover-btn-path {
+    fill: #c7b299;
 }
 
 .projects-button {
@@ -499,13 +551,6 @@ p {
     box-shadow: 0px 3px 0px 0px rgba(115, 99, 87, 1);
     border-radius: 3px;
     align-self: center;
-}
-
-.projects-button:hover {
-    cursor: pointer;
-}
-
-.projects_btn-text {
     padding: 15px 25px 12px;
     color: #ffffff;
     font-family: "Raleway";
@@ -515,6 +560,9 @@ p {
     text-transform: uppercase;
 }
 
+.projects-button:hover {
+    cursor: pointer;
+}
+
 /* ToDo: 
-- Секция Projects: блоки фильтров - это кнопки (button). Блоки с изображениями - figure.
-- Наложить темный фон на 2-й элемент figure
+- Добавить эффект при наведении (смена цвета) на кнопку поиска и корзины в header'е
