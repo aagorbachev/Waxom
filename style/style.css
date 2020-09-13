@@ -17,6 +17,7 @@ html {
 .container {
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .top {
@@ -27,6 +28,8 @@ html {
 }
 
 .front-header {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
@@ -47,12 +50,33 @@ html {
     letter-spacing: -1.36px;
 }
 
+.btn-1 {
+    display: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
 .menu {
     flex-grow: 0;
 }
 
+.open {
+    display: block;
+}
+
+.close {
+    display: none;
+}
+
+.menu {
+    display: block;
+}
+
 .menu-list {
     display: flex;
+    align-items: center;
 }
 
 .menu-item {
@@ -61,6 +85,7 @@ html {
     font-size: 14px;
     font-weight: 300;
     margin-right: 30px;
+    flex-shrink: 0;
 }
 
 .menu-item:last-of-type {
@@ -77,12 +102,12 @@ html {
     color: #c7b299;
 }
 
-.header-buttons {
-    position: relative;
-}
-
 .cart {
     margin-right: 30px;
+}
+
+.search-button {
+    position: relative;
 }
 
 .search, .cart {
@@ -104,7 +129,7 @@ html {
     fill: #c7b299;
 }
 
-button.cart:hover label, button.search:hover label {
+button.cart:hover, button.search:hover label {
     cursor: pointer;
 }
 
@@ -131,6 +156,9 @@ button.cart:hover, button.search:hover {
 
 .top-container {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -142,7 +170,7 @@ button.cart:hover, button.search:hover {
 
 .slider_left-control {
     position: absolute;
-    left: -25vw;
+    left: -25%;
     top: 35%;
     background: transparent;
     border: none;
@@ -164,7 +192,7 @@ button.cart:hover, button.search:hover {
 
 .slider_right-control {
     position: absolute;
-    right: -25vw;
+    right: -25%;
     top: 35%;
     background: transparent;
     border: none;
@@ -399,35 +427,51 @@ button.cart:hover, button.search:hover {
 
 .realization-text {
     text-align: center;
-    width: 770px;
+    width: 70%;
     align-self: center;
     margin-bottom: 40px;
 }
 
 .realization-templates {
     position: relative;
+    max-width: 1230px;
 }
 
 .template-left {
     display: block;
     position: absolute;
-    top: 82px;
+    bottom: 0;
+    left: 0;
+    right: 37.4%;
     z-index: 997;
+    max-width: 100%;
 }
 
 .template-right {
     display: block;
     position: absolute;
-    left: 460px;
-    top: 82px;
+    right: 0;
+    left: 37.4%;
+    bottom: 0;
     z-index: 998;
+    max-width: 100%;
 }
 
 .template-center {
     display: block;
     position: relative;
-    left: 230px;
+    left: 18.6%;
+    bottom: 0;
     z-index: 999;
+    width: 100%;
+    max-width: 770px;
+    height: auto;
+}
+
+.purchase-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .purchase {
@@ -440,7 +484,7 @@ button.cart:hover, button.search:hover {
     font-family: "Raleway";
     font-size: 28px;
     font-weight: 400;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .brand-style {
@@ -452,10 +496,6 @@ button.cart:hover, button.search:hover {
     font-family: "Montserrat";
     font-size: 18px;
     font-weight: 500;
-}
-
-.purchase-container {
-    justify-content: space-between;
 }
 
 .purchase-button {
@@ -492,10 +532,6 @@ button.cart:hover, button.search:hover {
     padding: 80px 0;
 }
 
-.projects-description {
-    align-self: center;
-}
-
 .projects-title {
     text-align: center;
     align-self: center;
@@ -504,7 +540,7 @@ button.cart:hover, button.search:hover {
 
 .projects-text {
     text-align: center;
-    width: 770px;
+    width: 70%;
     align-self: center;
     margin-bottom: 40px;
 }
@@ -517,6 +553,7 @@ button.cart:hover, button.search:hover {
 }
 
 .filter {
+    flex-shrink: 0;
     border-radius: 3px;
     border: 1px solid #ebebeb;
     background-color: #fff;
@@ -732,6 +769,7 @@ button.cart:hover, button.search:hover {
     object-fit: cover;
     position: absolute;
     z-index: -1;
+    max-width: 100%;
 }
 
 .video-play-btn {
@@ -901,25 +939,28 @@ button.cart:hover, button.search:hover {
 
 .posts-text {
     text-align: center;
-    width: 770px;
+    width: 70%;
     margin-bottom: 40px;
-}
-
-.posts-image {
-    display: block;
 }
 
 .posts-cardbox {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .posts-card {
     display: flex;
     flex-direction: column;
-    flex-basis: 370px;
+    flex-basis: 32%;
     position: relative;
+}
+
+.posts-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
 }
 
 .card-date {
@@ -1038,21 +1079,24 @@ button.cart:hover, button.search:hover {
     height: 15px;
 }
 
-.posts-card::after {
+.card_img-container {
+    position: relative;
+}
+
+.card_img-container::after {
     content: "";
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    width: 370px;
-    height: 220px;
+    width: 100%;
+    height: 100%;
     background-color: rgb(17, 17, 17);
     opacity: 0;
     z-index: 1;
     transition: 1s;
 }
 
-.posts-card:hover::after {
+.posts-card:hover .card_img-container::after {
     opacity: 0.7;
 }
 
@@ -1086,7 +1130,7 @@ button.cart:hover, button.search:hover {
     border: none;
 }
 
-.icon-path {
+.control-icon {
     fill: #d1d1d1;
     transition: 0.4s;
 }
@@ -1095,7 +1139,7 @@ button.cart:hover, button.search:hover {
     cursor: pointer;
 }
 
-.control:hover .icon-path {
+.control:hover .control-icon {
     fill: #c7b299;
 }
 
@@ -1109,6 +1153,7 @@ button.cart:hover, button.search:hover {
 .partners-container {
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .partners-image {
@@ -1292,16 +1337,101 @@ button.cart:hover, button.search:hover {
     color: #959595;
 }
 
+@media (max-width: 1230px) {
+    .realization-container {
+        max-width: 768px;
+        padding: 0 10px;
+    }
+    .template-left, .template-center, .template-right {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1169px) {
+    .container {
+        max-width: 768px;
+    }
+    .btn-1 {
+        display: block;
+        margin-left: 30px;
+    }
+    .menu {
+        display: none;
+        position: relative;
+    }
+    nav.open {
+        display: block;
+    }
+    .menu-list {
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 15px;
+        left: 50px;
+    }
+    .menu-item {
+        margin-right: 0;
+    }
+    .menu-item:last-of-type {
+        margin-right: 0;
+    }
+    .slider_right-control, .slider_left-control {
+        display: none;
+    }
+    .services-cardbox {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .services-card {
+        flex-basis: 50%;
+    }
+    .services-card:nth-child(-n+2) {
+        margin-bottom: 50px;
+    }
+    .purchase {
+        padding: 20px 0;
+    }
+    .purchase-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+    }
+    .purchase-text {
+        margin-bottom: 20px;
+    }
+    .purchase-button {
+        align-self: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .services-card {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .services-card:last-of-type {
+        margin-bottom: 0;
+    }
+    .card-text {
+        width: 50%;
+    }
+    .realization-text, .projects-text {
+        width: 100%;
+    }
+    .filter-box {
+        flex-wrap: wrap;
+    }
+    .filter {
+        margin-bottom: 10px;
+    }
+}
+
+}
+
 /* ToDo:
-+ Добавить pagination в секции Posts
-+ Pagination сделать кнопками
-+ добавить поле поиска при нажатии на иконку
-+ убрать абзац из кнопки
-+ Добавить эффект при наведении (смена цвета + плавность) на кнопки и иконки
-
-
+- сменить классы у свг-иконок
 Проблемы:
-- При указании параграфу свойства overflow-wrap: anywhere или overflow-wrap: break-word перенос слов не происходит
-- Странно отображаются svg-иконки в Mobile-списке и стрелки в секции "Recent Posts"
-- Кнопка Pagination в первой секции в конце обратной трансформации возвращается с рывком
 - Не работает скрипт с фоновым видео
