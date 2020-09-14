@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waxom</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Raleway:wght@400;500;600;700;800&family=Roboto&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Raleway:wght@300;400;500;600;700;800&family=Roboto&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/3d9bf02150.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/normalize.css">
@@ -74,7 +74,7 @@
                         nav.classList.toggle('close');
                     };</script>
             </header>
-            <div class="slider flex-column">
+            <div class="slider">
                 <h2 class="slider-title">Unique and Modern Design</h2>
                 <h1 class="main-title">Portfolio PSD Template</h1>
                 <p class="slider-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet
@@ -117,7 +117,7 @@
     </section>
     <section class="services">
         <div class="container">
-            <div class="services-cardbox flex-row">
+            <div class="services-cardbox">
                 <div class="services-card">
                     <div class="icon-box">
                         <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="49" height="49"
@@ -197,7 +197,7 @@
         </div>
     </section>
     <section class="realization">
-        <div class="realization-container flex-column">
+        <div class="realization-container">
             <h2 class="title realization-title">Waxom is Realization of your Ideas.</h2>
             <p class="text realization-text">Investigationes demonstraverunt lectores legere me lius quod ii legunt
                 saepius. Claritas est
@@ -218,7 +218,7 @@
         </div>
     </section>
     <section class="projects">
-        <div class="container flex-column">
+        <div class="projects-container container">
             <h2 class="title projects-title">Our Latest Projects.</h2>
             <p class="text projects-text">Investigationes demonstraverunt lectores legere me lius quod ii legunt
                 saepius. Claritas
@@ -413,7 +413,8 @@
         </div>
     </section>
     <section class="presentation">
-        <video id="video" class="video-play" width="1920" height="720" loop muted="muted" src="video/video.mp4">
+        <video id="video" class="video-play" width="1920" height="720" loop muted="muted" src="video/video.mp4"
+            poster="images/presentation/video-poster.png">
         </video>
         <button class="video-play-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
@@ -431,23 +432,9 @@
                 saepius, qui sequitur mutationem consuetudium.</p>
             <p class="video-timer">03:26</p>
         </div>
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
-                var video = document.querySelector("#video"),
-                    button = document.querySelector("button");
-
-                button.addEventListener("click", function () {
-                    video.play()
-                    video.setAttribute("controls", "controls");
-                }, false);
-
-                $(".video-play-btn").click(function () {
-                    $(".video-play-btn").addClass('video-play-btn--hide');
-                })
-            </script> -->
     </section>
     <section class="mobile">
-        <div class="mobile-container container flex-row">
+        <div class="mobile-container container">
             <div class="mobile-illustration"><img class="mobile-image" src="images/mobile/iPhone_in_hand.png"
                     alt="Iphone in hand"></div>
             <div class="mobile-description">
@@ -467,7 +454,7 @@
         </div>
     </section>
     <section class="counters">
-        <div class="counters-container container flex-row">
+        <div class="counters-container container">
             <div class="counter">
                 <img src="images/counters/icon-clients.svg" alt="Satisfied customers" class="counter-icon">
                 <p class="counter-summ-text">3587</p>
@@ -496,7 +483,7 @@
         </div>
     </section>
     <section class="posts">
-        <div class="container flex-column">
+        <div class="posts-container container">
             <div class="posts-description">
                 <h2 class="title posts-title">Recent Posts.</h2>
                 <p class="text posts-text">Investigationes demonstraverunt lectores legere me lius quod ii legunt
@@ -594,7 +581,7 @@
         </div>
     </section>
     <section class="partners">
-        <div class="partners-container container flex-row">
+        <div class="partners-container container">
             <img class="partners-image" src="images/partners/barber-haircuts.png" alt="">
             <img class="partners-image" src="images/partners/delicious-products.png" alt="">
             <img class="partners-image" src="images/partners/designers.png" alt="">
@@ -603,7 +590,7 @@
     </section>
     <footer>
         <section class="upper-footer">
-            <div class="upper-footer_container container flex-row">
+            <div class="upper-footer_container container">
                 <section class="waxom">
                     <div class="logo">
                         <img src="images/logo.svg" alt="" class="logo-img">
@@ -615,7 +602,7 @@
                         minim veniam, quis nostrud exerci suscipit lobortis claritatem.</p>
                     <p class="waxom-entry"><a class="waxom-link" href="#">Read More</a></p>
                 </section>
-                <section class="posts-mini footer-column">
+                <section class="posts-mini">
                     <h4 class="mini-title">Recent Posts</h4>
                     <div class="footer_text-block">
                         <p class="time">September 08, 2015</p>
@@ -631,7 +618,7 @@
                             seacula quarta decima</p>
                     </div>
                 </section>
-                <section class="twitter footer-column">
+                <section class="twitter">
                     <h4 class="mini-title">Our Twitter</h4>
                     <div class="footer_text-block">
                         <p class="footer-text"><a href="#" class="twitter-tag">@waxom</a> Cum soluta nobis eleifend
@@ -651,7 +638,7 @@
                         <p class="twitter-time">20 days ago</p>
                     </div>
                 </section>
-                <section class="dribble-widget footer-column">
+                <section class="dribble-widget">
                     <h4 class="mini-title">Dribbble Widget</h4>
                     <div class="dribble_image-block">
                         <img class="dribble-img" src="images/upper-footer/dribble-widget/photo-1.png" alt="">
@@ -663,7 +650,7 @@
             </div>
         </section>
         <section class="bottom-footer">
-            <div class="bottom-footer-container container flex-row">
+            <div class="bottom-footer-container container">
                 <ul class="bottom-footer_left-block">
                     <li class="bottom-footer_list-item">Copyright © 2015 <span class="property">Waxom</span></li>
                     <li class="bottom-footer_list-item"><a class="bottom-footer_link" href="#">Privacy Policy</a></li>
