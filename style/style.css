@@ -129,8 +129,8 @@ button.cart:hover, button.search:hover {
 
 #search-field {
   position: absolute;
-  right: 102px;
-  top: 0;
+  right: 0;
+  top: 35px;
   width: 0;
   height: 0;
   border: none;
@@ -142,7 +142,6 @@ button.cart:hover, button.search:hover {
   height: 25px;
   padding: 0 5px;
   outline: none;
-  box-shadow: 0 0 10px 5px #565657;
 }
 
 .top-container {
@@ -1400,6 +1399,13 @@ button.cart:hover, button.search:hover {
   }
   .close {
     display: none;
+  }
+  #search-field {
+    right: 102px;
+    top: 0;
+  }
+  #search-field:focus {
+    box-shadow: 0 0 10px 5px #565657;
   }
   .menu-list {
     flex-direction: column;
