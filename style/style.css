@@ -12,7 +12,8 @@ html {
 
 .top {
   height: 100vh;
-  background: url(../images/top-background.png);
+  background: #565657;
+  background: url(../images/top-background.png), rgba(17, 17, 17, 0.7);
   background-size: cover;
   background-position: center center;
 }
@@ -44,8 +45,11 @@ html {
   display: none;
   background: transparent;
   border: none;
-  outline: none;
   color: #fff;
+}
+
+.btn-1:focus {
+  outline: none;
 }
 
 .menu {
@@ -54,10 +58,6 @@ html {
 
 .open {
   display: block;
-}
-
-.close {
-  display: none;
 }
 
 .menu {
@@ -130,11 +130,10 @@ button.cart:hover, button.search:hover {
 #search-field {
   position: absolute;
   right: 0;
-  bottom: -30px;
-  width: 0px;
-  height: 0px;
+  top: 35px;
+  width: 0;
+  height: 0;
   border: none;
-  outline: none;
   transition: 0.7s;
 }
 
@@ -142,6 +141,7 @@ button.cart:hover, button.search:hover {
   width: 300px;
   height: 25px;
   padding: 0 5px;
+  outline: none;
 }
 
 .top-container {
@@ -166,10 +166,13 @@ button.cart:hover, button.search:hover {
   top: 35%;
   background: transparent;
   border: none;
-  outline: none;
   display: flex;
   align-items: center;
   transition: 1s;
+}
+
+.slider_left-control:focus {
+  outline: none;
 }
 
 .slider_left-control:hover {
@@ -188,10 +191,13 @@ button.cart:hover, button.search:hover {
   top: 35%;
   background: transparent;
   border: none;
-  outline: none;
   display: flex;
   align-items: center;
   transition: transform 1s;
+}
+
+.slider_right-control:focus {
+  outline: none;
 }
 
 .slider_right-control:hover {
@@ -235,37 +241,30 @@ button.cart:hover, button.search:hover {
 }
 
 .slider-button {
-  width: 170px;
   align-self: center;
   width: 170px;
   border: none;
   background-color: #998675;
-  box-shadow: 0px 3px 0px 0px #736357;
+  box-shadow: 0 3px 0 0 #736357;
   border-radius: 3px;
   padding: 15px 25px 12px;
   color: #ffffff;
   font-family: "Raleway";
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 23px;
   text-transform: uppercase;
   transition: 0.5s;
 }
 
-.slider-button:focus {
+.slider-button:hover {
+  cursor: pointer;
   background-color: #af9a87;
-  box-shadow: 0px 3px 0px 0px #8f7c6d;
-  outline: none;
+  box-shadow: 0 3px 0 0 #8f7c6d;
 }
 
 .slider-button:hover {
   cursor: pointer;
-}
-
-.slider-button:active {
-  background-color: #af9a87;
-  box-shadow: 0px 3px 0px 0px #8f7c6d;
-  outline: none;
 }
 
 .slider-pagination {
@@ -282,7 +281,6 @@ button.cart:hover, button.search:hover {
   background-color: #fff;
   opacity: 0.5;
   border-radius: 10px;
-  outline: none;
   border: none;
   margin-right: 10px;
   transition: 0.3s;
@@ -290,6 +288,7 @@ button.cart:hover, button.search:hover {
 
 .slider_page-btn:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
 .slider_page-btn:focus {
@@ -298,6 +297,7 @@ button.cart:hover, button.search:hover {
   border: 2px solid #d3c1ad;
   background-color: transparent;
   opacity: 1;
+  outline: none;
 }
 
 .services {
@@ -413,7 +413,7 @@ button.cart:hover, button.search:hover {
   color: #8c8c8c;
   font-family: "Montserrat";
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 28px;
 }
 
@@ -487,33 +487,29 @@ button.cart:hover, button.search:hover {
   color: #615855;
   font-family: "Montserrat";
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .purchase-button {
   width: 170px;
   border: none;
   background-color: #998675;
-  box-shadow: 0px 3px 0px 0px #736357;
+  box-shadow: 0 3px 0 0 #736357;
   border-radius: 3px;
   padding: 15px 25px 12px;
   color: #ffffff;
   font-family: "Raleway";
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 23px;
   text-transform: uppercase;
   transition: 0.5s;
 }
 
-.purchase-button:focus {
-  background-color: #af9a87;
-  box-shadow: 0px 3px 0px 0px #8f7c6d;
-  outline: none;
-}
-
-.purchase-button:hover, .purchase-button:active {
+.purchase-button:hover {
   cursor: pointer;
+  background-color: #af9a87;
+  box-shadow: 0 3px 0 0 #8f7c6d;
 }
 
 .projects {
@@ -554,7 +550,7 @@ button.cart:hover, button.search:hover {
   color: #8c8c8c;
   font-family: "Montserrat";
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 21px;
   padding: 10px 24px 8px;
   transition: 0.4s;
@@ -719,13 +715,13 @@ button.cart:hover, button.search:hover {
   width: 170px;
   border: none;
   background-color: #998675;
-  box-shadow: 0px 3px 0px 0px #736357;
+  box-shadow: 0 3px 0 0 #736357;
   border-radius: 3px;
   padding: 15px 25px 12px;
   color: #ffffff;
   font-family: "Raleway";
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 23px;
   text-transform: uppercase;
   transition: 0.5s;
@@ -733,12 +729,12 @@ button.cart:hover, button.search:hover {
 
 .projects-button:hover {
   cursor: pointer;
+  background-color: #af9a87;
+  box-shadow: 0 3px 0 0 #8f7c6d;
 }
 
-.projects-button:focus {
-  background-color: #af9a87;
-  box-shadow: 0px 3px 0px 0px #8f7c6d;
-  outline: none;
+.projects-button:hover {
+  cursor: pointer;
 }
 
 .presentation {
@@ -749,7 +745,8 @@ button.cart:hover, button.search:hover {
   text-align: center;
   position: relative;
   min-height: 720px;
-  background-color: rgba(17, 17, 17, 0.5);
+  background: #838385;
+  background: rgba(17, 17, 17, 0.5);
 }
 
 .video-play {
@@ -763,7 +760,8 @@ button.cart:hover, button.search:hover {
   width: 100px;
   height: 100px;
   margin-bottom: 44px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background: #cccccc;
+  background: rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 50px;
   display: flex;
@@ -783,10 +781,6 @@ button.cart:hover, button.search:hover {
 .video-play-btn:hover {
   cursor: pointer;
   transform: scale(1.2);
-}
-
-.video-play-btn:focus {
-  outline: none;
 }
 
 .presentation-title {
@@ -886,6 +880,7 @@ button.cart:hover, button.search:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 160px;
 }
 
 .counter-icon {
@@ -899,6 +894,8 @@ button.cart:hover, button.search:hover {
   font-size: 48px;
   font-weight: 200;
   line-height: 36px;
+  word-break: break-word;
+  text-align: center;
 }
 
 .counter-text {
@@ -906,6 +903,7 @@ button.cart:hover, button.search:hover {
   line-height: 20px;
   text-transform: uppercase;
   color: #c7b299;
+  text-align: center;
 }
 
 .counter::after {
@@ -1062,13 +1060,13 @@ button.cart:hover, button.search:hover {
   opacity: 0.3;
   border-radius: 10px;
   border: none;
-  outline: none;
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .posts_page-btn:hover {
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .posts_page-btn:focus {
@@ -1077,6 +1075,7 @@ button.cart:hover, button.search:hover {
   opacity: 1;
   width: 15px;
   height: 15px;
+  outline: none;
 }
 
 .card_img-container {
@@ -1145,7 +1144,8 @@ button.cart:hover, button.search:hover {
 
 .partners {
   padding: 140px 0;
-  background-image: url(../images/partners/photo.png);
+  background: #565657;
+  background: url(../images/partners/photo.png), rgba(17, 17, 17, 0.7);
   background-size: cover;
   background-position: center;
 }
@@ -1154,8 +1154,10 @@ button.cart:hover, button.search:hover {
   padding: 0 20px;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(4, 17.5%);
+  grid-template-columns: repeat(4, 1fr);
   gap: 90px;
+  align-items: center;
+  justify-items: center;
 }
 
 .upper-footer {
@@ -1311,7 +1313,17 @@ button.cart:hover, button.search:hover {
   list-style-type: none;
 }
 
-.bottom-footer .bottom-footer_list-item + .bottom-footer_list-item::before {
+.bottom-footer_left-block .bottom-footer_list-item::after {
+  content: "|";
+  padding: 0 15px;
+  color: #252525;
+}
+
+.bottom-footer_left-block .bottom-footer_list-item:last-of-type::after {
+  display: none;
+}
+
+.bottom-footer_right-block .bottom-footer_list-item+.bottom-footer_list-item::before {
   content: "|";
   padding: 0 15px;
   color: #252525;
@@ -1321,10 +1333,6 @@ button.cart:hover, button.search:hover {
   color: #555555;
   font-size: 13px;
   line-height: 20px;
-}
-
-.bottom-footer_list-item {
-  flex-shrink: 0;
 }
 
 .bottom-footer_link {
@@ -1339,10 +1347,22 @@ button.cart:hover, button.search:hover {
 
 .bottom-footer_left-block {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .bottom-footer_right-block {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.bottom-footer_left-block, .bottom-footer_right-block {
+  flex-basis: 49%;
 }
 
 .property {
@@ -1377,15 +1397,29 @@ button.cart:hover, button.search:hover {
   nav.open {
     display: block;
   }
+  .close {
+    display: none;
+  }
+  #search-field {
+    right: 102px;
+    top: 0;
+  }
+  #search-field:focus {
+    box-shadow: 0 0 10px 5px #565657;
+  }
   .menu-list {
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
     top: 15px;
-    left: 50px;
+    left: 45px;
+    z-index: 1;
+    background: rgba(86, 86, 87, 0.8);
+    padding: 5px;
   }
   .menu-item {
     margin-right: 0;
+    margin-bottom: 5px;
   }
   .menu-item:last-of-type {
     margin-right: 0;
@@ -1441,8 +1475,6 @@ button.cart:hover, button.search:hover {
   .partners-container {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-items: center;
     gap: 30px;
   }
   .upper-footer_container {
@@ -1469,6 +1501,17 @@ button.cart:hover, button.search:hover {
     flex-direction: column;
     align-items: center;
   }
+  .bottom-footer_left-block {
+    justify-content: center;
+    text-align: center;
+  }
+  .bottom-footer_right-block {
+    justify-content: center;
+    text-align: center;
+  }
+  .bottom-footer_list-item {
+    word-break: break-word;
+  }
 }
 
 @media (max-width: 959px) {
@@ -1480,9 +1523,15 @@ button.cart:hover, button.search:hover {
     display: flex;
     flex-direction: column;
   }
+  .projects-card {
+    width: 370px;
+  }
 }
 
 @media (max-width: 767px) {
+  #search-field:focus {
+    width: 250px;
+  }
   .services-cardbox {
     flex-direction: column;
   }
@@ -1522,6 +1571,7 @@ button.cart:hover, button.search:hover {
   }
   .counter {
     flex-basis: 100%;
+    max-width: 100%;
     margin-bottom: 30px;
   }
   .counter:last-of-type {
@@ -1557,9 +1607,14 @@ button.cart:hover, button.search:hover {
   .bottom-footer_left-block, .bottom-footer_right-block {
     flex-direction: column;
     align-items: center;
+    flex-basis: 100%;
   }
-  .bottom-footer .bottom-footer_list-item + .bottom-footer_list-item::before {
+  .bottom-footer_left-block .bottom-footer_list-item::after {
+    display: none;
+  }
+  .bottom-footer .bottom-footer_list-item+.bottom-footer_list-item::before {
     display: none;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
